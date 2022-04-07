@@ -44,9 +44,8 @@ https://github.com/ramsal/ProtocolosTecnicos/blob/master/Wazuh/assets.zip) en la
 ### 4. Integración de Wazuh con Telegram.
 git clone https://github.com/Nicolceng/CustomTelegram.git
 ```
-```
 cd CustomTelegram
-
+```
 mv custom-telegram custom-telegram.py /var/ossec/integrations
 ```
 chown root:ossec /var/ossec/integrations/custom-telegram*

@@ -55,7 +55,7 @@ chown root:ossec /var/ossec/integrations/custom-telegram*
 
 chmod 750 /var/ossec/integrations/custom-telegram*
 
-nano custom-telegram.py
+nano /var/ossec/integrations/custom-telegram.py
 ```
 Dentro de custom-telegram.py editar la variable de chat_id por el chat_id de nuestro bot
 ```

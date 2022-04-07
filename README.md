@@ -56,17 +56,18 @@ chown root:ossec /var/ossec/integrations/custom-telegram*
 chmod 750 /var/ossec/integrations/custom-telegram*
 ```
 
-Introducimos el chatID con este comando para vincular el bot.
+Introducimos este comando para poner la chatID(Sustituir KEYCHAT por la key del chat).
 ```
-sed -i 's/CHAT_ID=""/CHAT_ID="key"/g' /var/ossec/integrations/custom-telegram.py
+sed -i 's/CHAT_ID=""/CHAT_ID="KEYCHAT"/g' /var/ossec/integrations/custom-telegram.py
 ```
 
-Pegamos este codigo dentro del archivo ossec.conf para la integración del bot. Importante cambiar la API KEY por la de nuestro Bot.
+Pegamos este código dentro del archivo ossec.conf para la integración del bot (Sustituir APIKEY por la de nuestro bot).
 ```
+<!-- INTEGRACION DEL BOT DE TELEGRAM========================================= -->
 <integration>
   <name>custom-telegram</name>
   <level>3</level>
-  <hook_url>https://api.telegram.org/bot*YOUR API KEY*/sendMessage</hook_url>
+  <hook_url>https://api.telegram.org/botAPIKEY/sendMessage</hook_url>
   <alert_format>json</alert_format>
 </integration>
 ```

@@ -57,7 +57,7 @@ nano custom-telegram.py
 Dentro de custom-telegram.py editar la variable de chat_id por el chat_id de nuestro bot
 
 nano /var/ossec/etc/ossec.conf
-
+```
 Pegar dentro del archivo ossec.conf la siguiente integración:
 
 <integration>
@@ -66,7 +66,7 @@ Pegar dentro del archivo ossec.conf la siguiente integración:
   <hook_url>https://api.telegram.org/bot*YOUR API KEY*/sendMessage</hook_url>
   <alert_format>json</alert_format>
 </integration>
-
+```
 
 
 

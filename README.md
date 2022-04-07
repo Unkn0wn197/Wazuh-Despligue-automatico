@@ -68,9 +68,8 @@ Pegar dentro del archivo ossec.conf la siguiente integración, importante cambia
   <hook_url>https://api.telegram.org/bot*YOUR API KEY*/sendMessage</hook_url>
   <alert_format>json</alert_format>
 </integration>
+
+systemctl restart wazuh-manager
 ```
-
-
-
 
 

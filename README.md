@@ -52,7 +52,7 @@ cp -R /home/bee/assets/ /usr/share/kibana/plugins/wazuh/public/
 git clone https://github.com/Nicolceng/CustomTelegram.git
 cd CustomTelegram
 mv custom-telegram custom-telegram.py /var/ossec/integrations
-chown root:ossec /var/ossec/integrations/custom-telegram*
+chown root:[user root de la maquina. ej:bee] /var/ossec/integrations/custom-telegram*
 chmod 750 /var/ossec/integrations/custom-telegram*
 ```
 

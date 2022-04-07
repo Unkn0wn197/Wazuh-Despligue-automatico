@@ -37,31 +37,31 @@ cat > /etc/systemd/system/elasticsearch.service.d/elasticsearch.conf << EOF
 LimitMEMLOCK=infinity
 EOF
 ```
+
+
 ### 3. Cambiar aspecto del panel gráfico con los iconos de la empresa(automatizar).
 Cambiar logos de la gui principal. Descargar la carpeta assets de este github.
 ```
 rm -rf /usr/share/kibana/plugins/wazuh/public/assets/
 cp -R /home/bee/assets/ /usr/share/kibana/plugins/wazuh/public/
 ```
+
+
 ### 4. Integración de Wazuh con Telegram.
 ```
 git clone https://github.com/Nicolceng/CustomTelegram.git
-
 cd CustomTelegram
-
 mv custom-telegram custom-telegram.py /var/ossec/integrations
-
 chown root:ossec /var/ossec/integrations/custom-telegram*
-
 chmod 750 /var/ossec/integrations/custom-telegram*
+```
 
-nano /var/ossec/integrations/custom-telegram.py
+Introducimos el chatID con este comando para vincular el bot.
 ```
-Dentro de custom-telegram.py editar la variable de chat_id por el chat_id de nuestro bot
+sed -i 's/CHAT_ID=""/CHAT_ID="key"/g' /var/ossec/integrations/custom-telegram.py
 ```
-nano /var/ossec/etc/ossec.conf
-```
-Pegar dentro del archivo ossec.conf la siguiente integración, importante cambiar la API KEY por la de nuestro Bot:
+
+Pegamos este codigo dentro del archivo ossec.conf para la integración del bot. Importante cambiar la API KEY por la de nuestro Bot.
 ```
 <integration>
   <name>custom-telegram</name>
@@ -69,8 +69,6 @@ Pegar dentro del archivo ossec.conf la siguiente integración, importante cambia
   <hook_url>https://api.telegram.org/bot*YOUR API KEY*/sendMessage</hook_url>
   <alert_format>json</alert_format>
 </integration>
-
-systemctl restart wazuh-manager
 ```
 
 

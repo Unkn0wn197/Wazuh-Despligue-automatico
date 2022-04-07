@@ -43,21 +43,21 @@ https://github.com/ramsal/ProtocolosTecnicos/blob/master/Wazuh/assets.zip) en la
 ```
 ### 4. Integración de Wazuh con Telegram.
 git clone https://github.com/Nicolceng/CustomTelegram.git
-```
+
 cd CustomTelegram
-```
+
 mv custom-telegram custom-telegram.py /var/ossec/integrations
-```
+
 chown root:ossec /var/ossec/integrations/custom-telegram*
-```
+
 chmod 750 /var/ossec/integrations/custom-telegram*
-```
+
 nano custom-telegram.py
-```
+
 Dentro de custom-telegram.py editar la variable de chat_id por el chat_id de nuestro bot
 
 nano /var/ossec/etc/ossec.conf
-```
+
 Pegar dentro del archivo ossec.conf la siguiente integración:
 
 <integration>

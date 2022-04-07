@@ -37,7 +37,7 @@ cat > /etc/systemd/system/elasticsearch.service.d/elasticsearch.conf << EOF
 LimitMEMLOCK=infinity
 EOF
 ```
-### 3. Cambiar aspecto del panel gráfico con los iconos de la empresa.
+### 3. Cambiar aspecto del panel gráfico con los iconos de la empresa(automatizar).
 Cambiar logos de la gui principal. Descargar la carpeta assets de este github.
 ```
 rm -rf /usr/share/kibana/plugins/wazuh/public/assets/

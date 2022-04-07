@@ -16,9 +16,9 @@ Anotar las credenciales que salen al final de la instalación ya que no vuelven 
 
 
 ### 2. Configuraciones extras para el sistema.
-Bloquear memoria de elastic para que no sobrecargue el sistema. Añadir esta linea al final del archivo (/etc/elasticsearch/elasticsearch.ym).
+Bloquear memoria de elastic para que no sobrecargue el sistema.
 ```
-bootstrap.memory_lock: true
+echo 'bootstrap.memory_lock: true' >> /etc/elasticsearch/elasticsearch.yml
 ```
 
 Modificar el uso de menoria de java para dedicarle la necesaria. Añadir estas lineas al archivo (/etc/elasticsearch/jvm.options).

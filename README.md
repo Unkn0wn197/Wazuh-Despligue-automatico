@@ -42,7 +42,6 @@ Cambiar logos de la gui principal(sustituir carpeta assets por la otra).
 https://github.com/ramsal/ProtocolosTecnicos/blob/master/Wazuh/assets.zip) en la carpeta /usr/share/kibana/plugins/wazuh/public/assets/
 ```
 ### 4. Integración de Wazuh con Telegram.
-```
 git clone https://github.com/Nicolceng/CustomTelegram.git
 ```
 cd CustomTelegram

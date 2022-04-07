@@ -58,7 +58,7 @@ Dentro de custom-telegram.py editar la variable de chat_id por el chat_id de nue
 ```
 nano /var/ossec/etc/ossec.conf
 ```
-Pegar dentro del archivo ossec.conf la siguiente integración:
+Pegar dentro del archivo ossec.conf la siguiente integración, importante cambiar la API KEY por la de nuestro Bot:
 ```
 <integration>
   <name>custom-telegram</name>

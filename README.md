@@ -38,9 +38,10 @@ LimitMEMLOCK=infinity
 EOF
 ```
 ### 3. Cambiar aspecto del panel gráfico con los iconos de la empresa.
-Cambiar logos de la gui principal(sustituir carpeta assets por la otra).
+Cambiar logos de la gui principal. Descargar la carpeta assets de este github.
 ```
-https://github.com/ramsal/ProtocolosTecnicos/blob/master/Wazuh/assets.zip) en la carpeta /usr/share/kibana/plugins/wazuh/public/assets/
+rm -rf /usr/share/kibana/plugins/wazuh/public/assets/
+cp -R /home/bee/assets/ /usr/share/kibana/plugins/wazuh/public/
 ```
 ### 4. Integración de Wazuh con Telegram.
 ```

@@ -2,11 +2,12 @@
 Desarrollo de un script para automatizar el despligue de un SOC.
 
 
-### Adquisición de Cloud. 
-Preferiblemente Centos. Mínimo 8 Gb de RAM y un par de Cores.
-
-
 ### 1. Instalacion de Wazuh por script.
+Instalar dependencias necesarias.
+```
+apt install gnupg curl 
+```
+
 Verificar que es la última versión.
 ```
 curl -so ~/unattended-installation.sh https://packages.wazuh.com/resources/4.2/open-distro/unattended-installation/unattended-installation.sh && bash ~/unattended-installation.sh

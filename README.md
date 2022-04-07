@@ -5,7 +5,7 @@ Desarrollo de un script para automatizar el despligue de un SOC.
 ### 1. Instalacion de Wazuh por script.
 Instalar dependencias necesarias.
 ```
-apt install gnupg curl 
+apt install gnupg curl git -y
 ```
 
 Verificar que es la última versión.

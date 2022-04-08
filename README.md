@@ -72,7 +72,7 @@ Pegamos este código dentro del archivo ossec.conf para la integración del bot 
 <!-- INTEGRACION DEL BOT DE TELEGRAM========================================= -->
 <integration>
   <name>custom-telegram</name>
-  <level>3</level>
+  <level>7</level>
   <hook_url>https://api.telegram.org/botAPIKEY/sendMessage</hook_url>
   <alert_format>json</alert_format>
 </integration>

@@ -80,7 +80,7 @@ Pegamos este código dentro del archivo ossec.conf para la integración del bot 
 
 
 ### 5. Integración de Wazuh con VirusTotal.
-Pegamos este código dentro del archivo ossec.conf (Sustituir APIKEY por la generada de virusTotal).
+Pegamos este código dentro del archivo ossec.conf.
 ```
   <!-- INTEGRATION WITH VIRUSTOTAL================================================================================= -->
   <integration>

@@ -21,7 +21,7 @@ Bloquear memoria de elastic para que no sobrecargue el sistema.
 echo 'bootstrap.memory_lock: true' >> /etc/elasticsearch/elasticsearch.yml
 ```
 
-Modificar el uso de menoria de java para dedicarle la necesaria.
+Modificar el uso de menoria de java para dedicarle la necesaria(4gb en este caso).
 ```
 sed -i 's/-Xms1g/-Xms4g/g' "/etc/elasticsearch/jvm.options" && sed -i 's/-Xmx1g/-Xmx4g/g' "/etc/elasticsearch/jvm.options"
 ```

@@ -45,6 +45,12 @@ Cambiar logos de la gui principal. Descargar la carpeta assets de este github.
 rm -rf /usr/share/kibana/plugins/wazuh/public/assets/
 cp -R /home/bee/assets/ /usr/share/kibana/plugins/wazuh/public/
 ```
+Cambiar aspecto del Login
+```
+echo 'opendistro_security.basicauth.login.brandimage: "https://beehackers.es/wp-content/uploads/2018/04/BH.png"' >> /etc/kibana/kibana.yml
+echo 'opendistro_security.basicauth.login.title: SOC OMNICANAL' >> /etc/kibana/kibana.yml
+echo 'opendistro_security.basicauth.login.subtitle: Omnichannel Security Operations Center' >> /etc/kibana/kibana.yml
+```
 
 
 ### 4. Integración de Wazuh con Telegram.

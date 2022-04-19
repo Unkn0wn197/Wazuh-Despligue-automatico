@@ -68,7 +68,7 @@ sed -i 's/CHAT_ID=""/CHAT_ID="KEYCHAT"/g' /var/ossec/integrations/custom-telegra
 
 Pegamos este código dentro del archivo ossec.conf para la integración del bot (Sustituir APIKEY por la de nuestro bot).
 ```
-<!-- INTEGRACION DEL BOT DE TELEGRAM========================================= -->
+<!-- INTEGRATION WITH TELEGRAM=================================================================================== -->
 <integration>
   <name>custom-telegram</name>
   <level>7</level>

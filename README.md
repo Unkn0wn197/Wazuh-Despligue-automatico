@@ -52,7 +52,20 @@ echo 'opendistro_security.basicauth.login.subtitle: Omnichannel Security Operati
 ```
 
 
-### 4. Integración de Wazuh con Telegram.
+### 4. Integración de Wazuh con VirusTotal.
+Pegamos este código dentro del archivo ossec.conf.
+```
+  <!-- INTEGRATION WITH VIRUSTOTAL================================================================================= -->
+  <integration>
+    <name>virustotal</name>
+    <api_key>API_KEY</api_key> <!-- Replace with your VirusTotal API key -->
+    <group>syscheck</group>
+    <alert_format>json</alert_format>
+  </integration>
+```
+
+
+### 5. Integración de Wazuh con Telegram.
 ```
 git clone https://github.com/Nicolceng/CustomTelegram.git
 cd CustomTelegram
@@ -75,17 +88,4 @@ Pegamos este código dentro del archivo ossec.conf para la integración del bot 
   <hook_url>https://api.telegram.org/botAPIKEY/sendMessage</hook_url>
   <alert_format>json</alert_format>
 </integration>
-```
-
-
-### 5. Integración de Wazuh con VirusTotal.
-Pegamos este código dentro del archivo ossec.conf.
-```
-  <!-- INTEGRATION WITH VIRUSTOTAL================================================================================= -->
-  <integration>
-    <name>virustotal</name>
-    <api_key>API_KEY</api_key> <!-- Replace with your VirusTotal API key -->
-    <group>syscheck</group>
-    <alert_format>json</alert_format>
-  </integration>
 ```

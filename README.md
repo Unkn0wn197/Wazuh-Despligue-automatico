@@ -38,11 +38,15 @@ EOF
 ```
 
 
-### 3. Cambiar aspecto del panel gráfico con los iconos de la empresa(automatizar).
+### 3. Descargamos los recursos necesarios.
+Antes de continuar tendremos que descargar la carpeta recursos de este github en la carpeta de usuario de la maquina.
+
+
+### 4. Cambiar aspecto del panel gráfico con los iconos de la empresa(automatizar).
 Cambiar logos de la gui principal. Descargar la carpeta assets de este github.
 ```
 rm -rf /usr/share/kibana/plugins/wazuh/public/assets/
-cp -R /home/bee/assets/ /usr/share/kibana/plugins/wazuh/public/
+cp -R /home/bee/recursos/assets/ /usr/share/kibana/plugins/wazuh/public/
 ```
 Cambiar aspecto del Login
 ```
@@ -52,7 +56,7 @@ echo 'opendistro_security.basicauth.login.subtitle: Omnichannel Security Operati
 ```
 
 
-### 4. Integración de Wazuh con VirusTotal.
+### 5. Integración de Wazuh con VirusTotal.
 Pegamos este código dentro del archivo ossec.conf.
 ```
   <!-- INTEGRATION WITH VIRUSTOTAL================================================================================= -->
@@ -65,10 +69,9 @@ Pegamos este código dentro del archivo ossec.conf.
 ```
 
 
-### 5. Integración de Wazuh con Telegram.
+### 6. Integración de Wazuh con Telegram.
 ```
-git clone https://github.com/Nicolceng/CustomTelegram.git
-cd CustomTelegram
+cd /home/bee/recursos
 mv custom-telegram custom-telegram.py /var/ossec/integrations
 chown root:ossec /var/ossec/integrations/custom-telegram*
 chmod 750 /var/ossec/integrations/custom-telegram*
